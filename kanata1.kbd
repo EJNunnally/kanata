@@ -1,0 +1,85 @@
+(defsrc
+ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+ tab  q    w    e    r    t    y    u    i    o    p    lbrc rbrc \
+ caps a    s    d    f    g    h    j    k    l    ;    apo  ent
+ lsft z    x    c    v    b    n    m    ,    .    /    rsft
+ lctl lmet lalt wkup      spc            ralt menu rctl
+
+ prnt slck brk
+ ins  home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(defcfg process-unmapped-keys yes)
+
+(defvar
+ tto 200 ;; tap timeout
+ hto 200 ;; hold timeout
+)
+
+(defalias
+ ;; bspc-alt (tap-hold-press $tto $hto bspc ralt) ;; backspace if tapped, ralt if held, not very useful
+ e-a (tap-hold-press $tto $hto ent ralt) ;; enter if tapped, ralt if held
+ lwr (layer-while-held lower) ;; try this out, and if it sucks for the alt-bspc, use the tap dance version
+ ;; lwr (tap-hold-press $tto $hto (layer-while-held lower) lalt) ;; lower layer if tapped, lalt if held, use if needed
+ ;; rse (tap-hold-press $tto $hto (layer-while-held raise) rctl) ;; raise layer if tapped, rctl if held, not needed
+)
+
+(deflayer normal
+ XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+ esc  1    2    3    4    5    6    7    8    9    0    grv  XX   XX
+ tab  q    w    e    r    t    y    u    i    o    p    \    XX   XX
+ lctl a    s    d    f    g    h    j    k    l    ;    apo  ent
+ lsft z    x    c    v    b    n    m    ,    .    /    rsft
+ XX   lmet @lwr lalt      spc            bspc menu rctl
+
+
+ XX   XX   XX
+ XX   home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck XX   XX   XX
+ XX   XX   XX   XX
+ XX   XX   XX
+ XX   XX   XX   XX
+ XX        XX
+)
+
+(deflayer lower
+ _    _    _    _    _    _    _    _    _    _    _    _    _
+ f11  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f12  _    _    
+ _    XX   XX   XX   XX   XX   home pgdn pgup end  XX   XX   _    _    
+ _    XX   XX   min  eql  XX   left down up   rght XX   XX   _    
+ _    XX   XX   XX   XX   lbrc rbrc XX   XX   XX   XX   _    
+ _    _    _    _         ent            del  _    _    
+
+
+ _    _    _
+ _    _    _    
+ _    _    _    
+
+      _    
+ _    _    _    
+
+
+ _    _    _    _    
+ _    _    _    _    
+ _    _    _ 
+ _    _    _    _    
+ _         _ 
+)
