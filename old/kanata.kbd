@@ -1,0 +1,80 @@
+(defsrc
+ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+ tab  q    w    e    r    t    y    u    i    o    p    lbrc rbrc \
+ caps a    s    d    f    g    h    j    k    l    ;    apo  ent
+ lsft z    x    c    v    b    n    m    ,    .    /    rsft
+ lctl lmet lalt wkup      spc            ralt rmet menu rctl
+
+ prnt slck brk
+ ins  home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(defcfg process-unmapped-keys yes)
+
+(defvar
+ tto 200 ;; tap timeout
+ hto 200 ;; hold timeout
+)
+
+(defalias
+ fn1 (layer-while-held fn1)
+ ;; fn2 (layer-while-held fn2)
+)
+
+(deflayer base
+ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+ esc  1    2    3    4    5    6    7    8    9    0    grv  XX   bspc
+ tab  apo  ,    .    p    y    f    g    c    r    l    \    XX   XX
+ lctl a    o    e    u    i    d    h    t    n    s    -    ent
+ lsft ;    q    j    k    x    b    m    w    v    z    rsft
+ @fn1 lmet lalt wkup      spc            bspc rmet menu @fn1
+
+ prnt slck brk
+ ins  home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(deflayer fn1
+ _    _    _    _    _    _    _    _    _    _    _    _    _
+ f11  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f12  _    _
+ _    XX   XX   XX   XX   XX   home pgdn pgup end  XX   XX   _    _
+ _    XX   XX   lbrc rbrc =    left down up   rght XX   XX   _
+ _    XX   XX   XX   XX   XX   XX   XX   XX   XX   /    _
+ _    _    _    _         _              _    _    _    _
+
+ _    _    _
+ _    _    _
+ _    _    _
+
+      _
+ _    _    _
+
+
+ _    _    _    _
+ _    _    _    _
+ _    _    _
+ _    _    _    _
+ _         _
+)
