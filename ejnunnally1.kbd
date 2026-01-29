@@ -1,0 +1,129 @@
+(defsrc
+ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+ tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+ caps a    s    d    f    g    h    j    k    l    ;    '    ent
+ lsft z    x    c    v    b    n    m    ,    .    /    rsft
+ lctl lmet lalt wkup      spc            ralt rmet menu rctl
+
+ prnt slck brk
+ ins  home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(defcfg process-unmapped-keys yes)
+
+(defvar
+ tto 200 ;; tap timeout
+ hto 200 ;; hold timeout
+)
+
+(defalias
+ dv  (layer-switch dvorak)
+ qw  (layer-switch qwerty)
+ fn1 (layer-while-held fn1)
+ lay (layer-while-held layers)
+ esl (tap-hold-release $tto $hto esc @lay)
+)
+
+(deflayer dvorak
+ @esl XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+ esc  1    2    3    4    5    6    7    8    9    0    grv  del  bspc
+ tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
+ lctl a    o    e    u    i    d    h    t    n    s    -    ent
+ lsft ;    q    j    k    x    b    m    w    v    z    rsft
+ lctl lmet @fn1 wkup      spc            ralt rmet menu rctl
+
+ XX   XX   XX
+ XX   XX   XX
+ XX   XX   XX
+
+      XX
+ XX   XX   XX
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(deflayer qwerty ;; in case I allow someone else to use my keyboard
+ @esl f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+ tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+ caps a    s    d    f    g    h    j    k    l    ;    '    ent
+ lsft z    x    c    v    b    n    m    ,    .    /    rsft
+ lctl lmet lalt wkup      spc            ralt rmet menu rctl
+
+ prnt slck brk
+ ins  home pgup
+ del  end  pgdn
+
+      up
+ left down rght
+
+
+ nlck kp/  kp*  kp-
+ kp7  kp8  kp9  kp+
+ kp4  kp5  kp6
+ kp1  kp2  kp3  kprt
+ kp0       kp.
+)
+
+(deflayer fn1
+ _    _    _    _    _    _    _    _    _    _    _    _    _
+ f11  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f12  _    _
+ _    XX   XX   XX   XX   XX   home pgdn pgup end  XX   XX   XX   _
+ _    XX   XX   [    ]    XX   left down up   rght XX   caps _
+ _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _
+ _    _    _    _         _              _    _    _    _
+
+ _    _    _
+ _    _    _
+ _    _    _
+
+      _
+ _    _    _
+
+
+ _    _    _    _
+ _    _    _    _
+ _    _    _
+ _    _    _    _
+ _         _
+)
+
+(deflayer layers ;; esc-1 is qwerty, esc-2 is dvorak, esc-0 is live reload
+ _    _    _    _    _    _    _    _    _    _    _    _    _
+ _    @qw  @dv  _    _    _    _    _    _    _    lrld _    _    _
+ _    _    _    _    _    _    _    _    _    _    _    _    _    _
+ _    _    _    _    _    _    _    _    _    _    _    _    _
+ _    _    _    _    _    _    _    _    _    _    _    _
+ _    _    _    _         _              _    _    _    _
+
+ _    _    _
+ _    _    _
+ _    _    _
+
+      _
+ _    _    _
+
+
+ _    _    _    _
+ _    _    _    _
+ _    _    _
+ _    _    _    _
+ _         _
+)
