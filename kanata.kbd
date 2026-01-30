@@ -49,15 +49,15 @@
  esc  1    2    3    4    5    6    7    8    9    0    grv  del  bspc
  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
  lctl @a   @o   @e   @u   i    d    @h   @t   @n   @s   -    ent
- lsft ;    q    j    k    x    b    m    w    v    z    rsft
- lctl lmet @fn1 wkup      spc            ralt rmet menu rctl
+ XX   ;    q    j    k    x    b    m    w    v    z    XX
+ XX   lmet @fn1 wkup      spc            ralt rmet menu XX
 
  XX   XX   XX
  XX   XX   XX
  XX   XX   XX
 
-      XX
- XX   XX   XX
+      up
+ left down rght
 
 
  nlck kp/  kp*  kp-
