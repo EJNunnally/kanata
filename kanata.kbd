@@ -94,8 +94,8 @@
  _    _    _    _    _    _    _    _    _    _    _    _    _
  f11  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f12  _    _
  _    XX   XX   XX   XX   XX   home pgdn pgup end  XX   XX   XX   _
- _    XX   XX   [    ]    XX   left down up   rght XX   caps _
- _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _
+ _    lsft lctl lalt lmet XX   left down up   rght XX   caps _
+ _    XX   XX   XX   XX   XX   XX   [    ]    XX   XX   _
  _    _    _    _         _              _    _    _    _
 
  _    _    _
