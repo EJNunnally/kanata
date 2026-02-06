@@ -38,30 +38,30 @@
  fn1 (layer-while-held fn1)
  lay (layer-while-held layers)
  esl (tap-hold-release $tto $hto esc @lay)
- a   (tap-hold-tap-keys $tto $hto a lsft ())
- o   (tap-hold-tap-keys $tto $hto o lctl ())
- e   (tap-hold-tap-keys $tto $hto e lalt ())
- u   (tap-hold-tap-keys $tto $hto u lmet ())
- h   (tap-hold-tap-keys $tto $hto h rmet ())
- t   (tap-hold-tap-keys $tto $hto t ralt ())
- n   (tap-hold-tap-keys $tto $hto n rctl ())
- s   (tap-hold-tap-keys $tto $hto s rsft ())
+ ;; a   (tap-hold-tap-keys $tto $hto a lsft ())
+ ;; o   (tap-hold-tap-keys $tto $hto o lctl ())
+ cln (tap-hold-tap-keys $tto $hto ; lalt ())
+ ;; u   (tap-hold-tap-keys $tto $hto u lmet ())
+ ;; h   (tap-hold-tap-keys $tto $hto h rmet ())
+ z   (tap-hold-tap-keys $tto $hto z ralt ())
+ ;; n   (tap-hold-tap-keys $tto $hto n rctl ())
+ ;; s   (tap-hold-tap-keys $tto $hto s rsft ())
 )
 
 (deflayer dvorak
  @esl XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
  esc  1    2    3    4    5    6    7    8    9    0    grv  del  bspc
  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
- lctl @a   @o   @e   @u   i    d    @h   @t   @n   @s   -    ent
- XX   ;    q    j    k    x    b    m    w    v    z    XX
+ lctl a    o    e    u    i    d    h    t    n    s    -    ent
+ lsft @cln q    j    k    x    b    m    w    v    @z   rsft
  XX   lmet @fn1 wkup      spc            ralt rmet menu XX
 
  XX   XX   XX
  XX   XX   XX
  XX   XX   XX
 
-      up
- left down rght
+      XX
+ XX   XX   XX
 
 
  nlck kp/  kp*  kp-
@@ -98,8 +98,8 @@
  _    _    _    _    _    _    _    _    _    _    _    _    _
  f11  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f12  _    _
  _    XX   XX   XX   XX   XX   home pgdn pgup end  XX   XX   XX   _
- _    lsft lctl lalt lmet XX   left down up   rght XX   caps _
- _    XX   XX   XX   XX   XX   XX   [    ]    XX   XX   _
+ _    XX   XX   [    ]    XX   left down up   rght XX   caps _
+ _    lalt XX   XX   XX   XX   XX   XX   XX   XX   ralt _
  _    _    _    _         _              _    _    _    _
 
  _    _    _
