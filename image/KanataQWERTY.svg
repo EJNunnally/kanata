@@ -858,6 +858,13 @@
 </g>
 <path d='M140.7069 234.8559V288.6519H476.9489V234.8559Z' fill='#fff'/>
 <path d='M140.7069 234.8559V288.6519H476.9489V234.8559Z' stroke='#000' fill='none' stroke-width='.99628' stroke-miterlimit='10'/>
+<g transform='matrix(1 0 0 1 180.8241 316.8161)'>
+<use x='-34.140102' y='-62.035555' xlink:href='#g1-54'/>
+<use x='-23.508097' y='-62.035555' xlink:href='#g1-83'/>
+<use x='-13.771173' y='-62.035555' xlink:href='#g1-68'/>
+<use x='-4.90598' y='-62.035555' xlink:href='#g1-70'/>
+<use x='3.959213' y='-62.035555' xlink:href='#g1-72'/>
+</g>
 <path d='M476.9489 234.8559V288.6519H544.1989V234.8559Z' fill='#e0e0e0'/>
 <path d='M476.9489 234.8559V288.6519H544.1989V234.8559Z' stroke='#000' fill='none' stroke-width='.99628' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 517.0681 316.8161)'>
